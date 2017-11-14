@@ -1,0 +1,61 @@
+/*简单的列表样式*/
+.simple-list{
+  margin: 15px 0;
+}
+.simple-list .title{
+  background-color: #f5f5f6;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  padding-left: 29px;
+}
+.simple-list .content{
+  padding: 15px 12px;
+  border: 1px solid #ebecec;
+}
+.simple-list li{
+  padding: 4px 0;
+}
+.simple-list a{
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color .3s;
+}
+.simple-list a:hover{
+  color: #28d0e9;
+}
+
+/*链接hover的时候，底部出现向两边延伸的下划线*/
+.link-entry{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 16px;
+}
+
+.link-entry:hover{
+  color: #00c1de;
+}
+
+.link-entry::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: 2px;
+  background-color: #00c1de;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: .4s ease-in-out;
+}
+
+.link-entry:hover::after,
+.link-entry:active::after{
+  visibility: visible;
+  transform: scaleX(1);
+}

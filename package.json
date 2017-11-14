@@ -1,0 +1,14 @@
+{
+  "name": "sojson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xxxxxMiss <xxxxxmiss@gmail.com> (https://github.com/xxxxxMiss)",
+  "license": "ISC",
+  "dependencies": {
+    "layui": "0.0.1"
+  }
+}

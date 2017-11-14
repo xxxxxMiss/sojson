@@ -1,0 +1,15 @@
+@import url("./layout.css");
+@import url("./common.css");
+@import url("./card.css");
+@import url("./footer.css");
+@import url("./message.css");
+
+.simple-list .layui-elem-quote{
+  border-color: #00c1de;
+  padding: 10px 15px;
+  margin: 15px 0;
+}
+
+.simple-list li:first-child .layui-elem-quote{
+  margin-top: -10px;
+}

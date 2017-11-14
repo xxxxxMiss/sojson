@@ -1,0 +1,1 @@
+a new version static website for [sojson](http://www.sojson.com/)

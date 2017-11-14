@@ -1,0 +1,68 @@
+.footer-block{
+  background-color: #373d41;
+}
+.footer-container{
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #939393;
+}
+.footer-container a:hover{
+  color: #28d0e9;
+}
+.footer-container a{
+  transition: color .3s;
+  color: #9b9ea0;
+  cursor: pointer;
+}
+
+.footer-block .footer-left p{
+  margin-top: 25px;
+}
+
+.footer-block .footer-right{
+  font-size: 0;
+  text-align: center;
+}
+.footer-right .about,
+.footer-right .contact,
+.footer-right .sponsor{
+  font-size: 14px;
+  display: inline-block;
+  width: 33.3333%;
+}
+
+.footer-right .about-title,
+.footer-right .contact-title,
+.footer-right .sponsor-title{
+  font-size: 16px;
+  color: #d7d8d9;
+  margin-bottom: 14px;
+}
+
+.footer-certification{
+  padding-top: 25px;
+}
+.footer-certification,
+.footer-certification a{
+  color: #939393;
+  text-align: center;
+}
+.footer-certification img{
+  width: 20px;
+}
+.footer-certification .verified-code{
+  padding-left: 5px;
+}
+.footer-certification .verified-depart{
+  position: relative;
+  padding-left: 5px;
+}
+.footer-certification .verified-depart:before{
+  content: "";
+  position: absolute;
+  width: 1px;
+  left: 0;
+  top: 2px;
+  bottom: 2px;
+  background-color: #d7d8d9;
+}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="./layui/css/layui.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <!-- /header -->
+  <header class="header-fixed">
+    <!-- fixed头部 -->
+    <div class="layui-row header-container">
+      <ul class="layui-col-md8">
+        <li class="layui-col">
+          <a class="link-entry" href="">在线工具</a>
+        </li>
+        <li class="layui-col">
+          <a class="link-entry" href="">生活工具</a>
+        </li>
+        <li class="layui-col">
+          <a class="link-entry" href="">技术博客</a>
+        </li>
+        <li class="layui-col">
+          <a class="link-entry" href="">备案查询</a>
+        </li>
+        <li class="layui-col">
+          <a class="link-entry" href="">免费JSON API</a>
+        </li>
+      </ul>
+      <ul class="layui-col-md4 header-right">
+        <li class="layui-col" id="J_message">
+          <a class="message-notify">
+            <span id="J_redDot" class="red-dot"></span>
+            <i class="iconfont icon-lingdang2f"></i>
+          </a>
+        </li>
+        <li class="layui-col">
+          <a id="J_login">登录</a>
+          <div class="user-block">
+            <img id="J_avatar" class="user-avatar" src="./images/logo_online.png">
+            <div class="user-info">
+              <ul>
+                <li>
+                  <a href="" title=""><i class="iconfont icon-login"></i>我的主页</a>
+                </li>
+                <li>
+                  <a href="" title=""><i class="iconfont icon-setting"></i>设置</a>
+                </li>
+                <li>
+                  <a href="" title=""><i class="iconfont icon-logout"></i>退出</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+      
+      <!-- 头部中的消息 -->
+      <div class="msg-container" id="J_messageBox">
+        <span class="msg-arrow-up"></span>
+        <div class="msg-header">
+          <div class="layui-row">
+            <!-- 此处可以添加多个tab, 目前只有一个  -->
+            <!-- <div class="layui-col-md4"><a>我的消息</a></div> -->
+            <!-- <div class="layui-col-md4"><a>我的消息</a></div> -->
+            <a>我的消息</a>
+          </div>
+        </div>
+        <div class="msg-content">
+          <ul>
+            <li class="content-item"><a href="" title="">geemo在饿了么前端中发布了Mongo代理程序实现-代码实战篇</a></li>
+            <li class="content-item"><a href="" title="">geemo 在 饿了么前端 中发布了 Mongo 代理程序实现-代码实战篇</a></li>
+            <li class="content-item"><a href="" title="">geemo 在 饿了么前端 中发布了 Mongo 代理程序实现-代码实战篇</a></li>
+          </ul>
+        </div>
+        <div class="msg-footer">
+          <div class="layui-row">
+            <div class="layui-col-md4 footer-left">
+              <i class="iconfont icon-setting"><a>设置</a></i>
+            </div>
+            <div class="layui-col-md8 footer-right">
+              <a href="" title="">查看全部提醒</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="layout">
+    <div class="layout-header">
+      <div class="banner-container">
+        <ul class="layui-row">
+          <li class="layui-col-md4">
+            <a href=""><img src="./images/logo_online.png" height="33" width="241" alt=""></a>
+          </li>
+          <li class="layui-col-md4">
+            <a href=""><img src="./images/logo_online.png" height="33" width="241" alt=""></a>
+          </li>
+          <li class="layui-col-md4">
+            <a href=""><img src="./images/logo_online.png" height="33" width="241" alt=""></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 工具导航 -->
+      <div class="nav-block">
+        <div class="nav-container">
+          <div class="website-search" id="J_search_container">
+            <input id="J_search" type="text" name="title" required lay-verify="required" placeholder="输入搜索内容" autocomplete="off" class="layui-input">
+            <i class="iconfont icon-search"></i>
+          </div>
+          <ul class="layui-nav" lay-filter="">
+            <li class="layui-nav-item">
+              <a href="javascript:;">解决方案</a>
+              <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+              </dl>
+            </li>
+            <li class="layui-nav-item">
+              <a href="">加密/解密</a>
+              <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="">散列/哈希</a></dd>
+                <dd><a href="">Base64加密/解密</a></dd>
+                <dd><a href="">图片转Base64</a></dd>
+              </dl>
+            </li>
+            <li class="layui-nav-item">
+              <a href="">压缩/格式化</a>
+              <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="">JS/HTML压缩、格式化</a></dd>
+                <dd><a href="">CSS格式化、压缩</a></dd>
+                <dd><a href="">XML格式化、压缩</a></dd>
+                <dd><a href="">SQL格式化、压缩</a></dd>
+                <dd><a href="">JS代码混淆、加密</a></dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="J_layoutCon" class="layui-row layout-container">
+      <div class="layout-main-view">
+        <div class="list-block">
+          <h3 class="list-title"><i class="iconfont icon-book"></i>加密/解密</h3>
+          <ul class="layui-row">
+            <li class="layui-col-md4">
+              <!-- 卡片列表 -->
+              <div class="card-container">
+                <div class="card-header">
+                  <div class="card-iconfont">
+                    <i class="iconfont icon-js"></i>
+                  </div>
+                  <div class="card-title-block">
+                    <h3 class="card-title">Javascript压缩/解压</h3>
+                    <a class="card-collect">
+                      <i class="iconfont icon-collect"></i>加入收藏
+                    </a>
+                  </div>
+                </div>
+                <p class="card-content">在线js美化、解压缩、混淆混淆混淆混,在线js美化、解压缩、混淆混淆混淆混</p>
+                <div class="card-footer">
+                  <div class="footer-link">
+                    <a  href="http://www.sojson.com">http://www.sojson.com</a>
+                  </div>
+                  <div class="footer-text">
+                    <a>进入</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="layui-col-md4">
+              <!-- 卡片列表 -->
+              <div class="card-container">
+                <div class="card-header">
+                  <div class="card-iconfont">
+                    <i class="iconfont icon-js"></i>
+                  </div>
+                  <div class="card-title-block">
+                    <h3 class="card-title">Javascript压缩/解压</h3>
+                    <a class="card-collect">
+                      <i class="iconfont icon-collect"></i>加入收藏
+                    </a>
+                  </div>
+                </div>
+                <p class="card-content">在线js美化、解压缩、混淆混淆混淆混,在线js美化、解压缩、混淆混淆混淆混</p>
+                <div class="card-footer">
+                  <div class="footer-link">
+                    <a  href="http://www.sojson.com">http://www.sojson.com</a>
+                  </div>
+                  <div class="footer-text">
+                    <a>进入</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="layui-col-md4">
+              <!-- 卡片列表 -->
+              <div class="card-container">
+                <div class="card-header">
+                  <div class="card-iconfont">
+                    <i class="iconfont icon-js"></i>
+                  </div>
+                  <div class="card-title-block">
+                    <h3 class="card-title">Javascript压缩/解压</h3>
+                    <a class="card-collect">
+                      <i class="iconfont icon-collect"></i>加入收藏
+                    </a>
+                  </div>
+                </div>
+                <p class="card-content">在线js美化、解压缩、混淆混淆混淆混,在线js美化、解压缩、混淆混淆混淆混</p>
+                <div class="card-footer">
+                  <div class="footer-link">
+                    <a  href="http://www.sojson.com">http://www.sojson.com</a>
+                  </div>
+                  <div class="footer-text">
+                    <a>进入</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-block">
+          <h3 class="list-title"><i class="iconfont icon-book"></i>教程系列</h3>
+          <ul class="layui-row">
+            <li class="layui-col-md6">
+              <!-- 卡片列表 -->
+              <div class="card-container">
+                <a>
+                  <div class="layui-row card-header">
+                    <div class="layui-col-md5 card-media">
+                      <img src="./images/1_0_Banner.png" alt="Kotlin">
+                    </div>
+                    <div class="layui-col-md7 card-title-block">
+                      <h3 class="card-title">开发语言：Java</h3>
+                      <h3 class="card-title">主要知识：Shiro</h3>
+                      <h3 class="card-title">使用范畴：权限管理</h3>
+                    </div>
+                  </div>
+                  <p> 本站评论是站长自主采用 Java 开发的评论，UI 使用了多说的，Javascript  和 后台代码都是自主实现，由于站长最近从北京（5年）回到了老家（长沙），刚刚入职，需要大量的时间去适应和给公司带来价值，所以这个“小作业”可能有点慢，还请见谅。</p>
+                </a>
+              </div>
+            </li>
+
+            <li class="layui-col-md6">
+              <!-- 卡片列表 -->
+              <div class="card-container">
+                <a>
+                  <div class="layui-row card-header">
+                    <div class="layui-col-md5 card-media">
+                      <img src="./images/1_0_Banner.png" alt="Kotlin">
+                    </div>
+                    <div class="layui-col-md7 card-title-block">
+                      <h3 class="card-title">开发语言：Java</h3>
+                      <h3 class="card-title">主要知识：Shiro</h3>
+                      <h3 class="card-title">使用范畴：权限管理</h3>
+                    </div>
+                  </div>
+                  <p> 本站评论是站长自主采用 Java 开发的评论，UI 使用了多说的，Javascript  和 后台代码都是自主实现，由于站长最近从北京（5年）回到了老家（长沙），刚刚入职，需要大量的时间去适应和给公司带来价值，所以这个“小作业”可能有点慢，还请见谅。</p>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="layui-row">
+          <div class="layui-col-md6">
+            <div class="list-block">
+              <h3 class="list-title"><i class="iconfont icon-book"></i>技术博客</h3>
+              <ul class="simple-list">
+                <li><a href="" title=""> Java 解析JSON的几种方式</a></li>
+                <li><a href="" title=""> 怎么把JSON数组转换为集合？</a></li>
+                <li><a href="" title=""> JSON 和 XML互转的几种实现？</a></li>
+                <li><a href="" title=""> Ajax 怎么获取JSON数据？</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="layui-col-md6">
+            <div class="list-block">
+              <h3 class="list-title"><i class="iconfont icon-book"></i>IT百科</h3>
+              <ul class="simple-list">
+                <li><a href="" title=""> Java 解析JSON的几种方式</a></li>
+                <li><a href="" title=""> 怎么把JSON数组转换为集合？</a></li>
+                <li><a href="" title=""> JSON 和 XML互转的几种实现？</a></li>
+                <li><a href="" title=""> Ajax 怎么获取JSON数据？</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layout-helper">
+        <div id="J_folder" class="switch-folder">
+          <i class="iconfont icon-shouqi"></i>
+        </div>
+        <div class="right-menu-container">
+          <div class="simple-list">
+            <h3 class="title">公告</h3>
+            <div class="content">
+              <p>本工具智能识别Javascript,HTML 代码，所以，在页面里有Html或Javascript代码的时候，直接放进去一起格式化和普通压</p>
+              <ul class="user-action-statistic">
+                <li>
+                  <i class="iconfont icon-collect-checked"></i>
+                  <p class="statistic-text">已收藏</p>
+                </li>
+                <li>
+                  <i class="iconfont icon-zan-checked"></i>
+                  <p class="statistic-text">点赞<span>34K+</span></p>
+                </li>
+                <li>
+                  <i class="iconfont icon-share"></i>
+                  <p class="statistic-text">分享<span>34K+</span></p>
+                </li>
+                <li>
+                  <i class="iconfont icon-qq"></i>
+                  <p class="statistic-text"><a>加群</a></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="simple-list">
+            <h3 class="title">相关工具</h3>
+            <div class="content">
+              <ul>
+                <li>
+                 <a href="">JSON在线解析</a>
+                </li>
+                <li>
+                  <a href="">JSON在线压缩转义</a>
+                </li>
+                <li>
+                  <a href="">JSON & XML互转</a>
+                </li>
+                <li>
+                  <a href="">JSON 转 Java 实体</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="footer-block">
+      <div class="footer-container">
+        <div class="layui-row footer-site-desc">
+          <div class="layui-col-md7 footer-left">
+            <img src="./images/logo_online.png" alt="站点logo">
+            <p>本网站所有工具，都是站长整合网上已有工具、开源包等，并全部遵循原有协议发布，著作权归属原作者或是团队。</p>
+          </div>
+          <div class="layui-col-md5 footer-right">
+            <ul class="about">
+              <li class="about-title">关于</li>
+              <li><a>关于我们</a></li>
+              <li><a>广告合作</a></li>
+              <li><a>友情链接</a></li>
+            </ul>
+            <ul class="contact">
+              <li class="contact-title">联系方式</li>
+              <li><a>QQ联系我</a></li>
+              <li><a>电子邮件</a></li>
+              <li><a>CDN加速</a></li>
+            </ul>
+            <ul class="sponsor">
+              <li class="sponsor-title">赞助商</li>
+              <li><a>3023数据</a></li>
+              <li><a>文档管理</a></li>
+              <li><a>七牛管理</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-certification">
+          <a>
+            <img src="./images/police-verified.png">
+            <span class="verified-code">京ICP备16038595号-2</span>
+          </a>
+          <span class="verified-depart">京公网安备11010802014000</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./layui/layui.js"></script>
+  <script>
+  //一般直接写在一个js文件中
+  layui.use(['layer', 'form'], function(){
+    var layer = layui.layer
+    ,form = layui.form;
+    
+    layer.msg('Hello World');
+  });
+
+  //注意：导航 依赖 element 模块，否则无法进行功能性操作
+  layui.use('element', function(){
+    var element = layui.element;
+    
+    //…
+  });
+  </script> 
+  <script>
+    function $$(id){
+      return document.getElementById(id)
+    }
+    $$('J_search_container').addEventListener('mouseenter', function(){
+      $$('J_search').focus()
+    })
+
+    $$('J_login').addEventListener('click', function(){
+      this.style.display = 'none';
+      $$('J_avatar').style.display = 'inline-block'
+    })
+
+    $$('J_folder').addEventListener('click', function(){
+      $$('J_layoutCon').classList.toggle('is-active')
+    })
+
+    $$('J_message').addEventListener('click', function(){
+      var msgBox = $$('J_messageBox')
+      if (msgBox.style.display == 'none') {
+        msgBox.style.display = 'block'
+        $$('J_redDot').style.display = 'none'
+      } else {
+        msgBox.style.display = 'none'
+      }
+      
+    })
+  </script>
+</body>
+</html>

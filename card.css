@@ -1,0 +1,78 @@
+@import url("./sojson_iconfont/iconfont.css");
+
+/*卡片列表*/
+.list-block{
+  margin-bottom: 30px;
+  margin-right: 15px;
+}
+.list-block .list-title{
+  padding: 10px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ebecec;
+  font-size: 18px;
+  font-weight: bold;
+}
+.list-title .icon-book{
+  color: #00c1de;
+  font-size: 20px;
+  padding-right: 10px;
+}
+.card-container {
+  margin-right: 15px;
+  padding: 12px;
+  border: 1px solid #c5d8db;
+  transition: all .5s cubic-bezier(.4,0,.2,1);
+}
+.card-container:hover{
+  border-color: #00c1de;
+  transform: scaleY(1.08);
+}
+
+.card-header .card-iconfont,
+.card-header .card-media,
+.card-header .card-title-block{
+  display: inline-block;
+}
+.card-iconfont .iconfont{
+  font-size: 50px;
+  color: #ff8200;
+  margin-right: 20px;
+}
+.card-media + .card-title-block{
+  padding-left: 20px;
+}
+.card-header .card-title{
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.card-header img{
+  width: 100%;
+}
+.card-collect .iconfont{
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.card-container .card-content{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 15px 0;
+  color: #999;
+}
+
+.card-footer{
+  font-size: 0;
+}
+.card-footer .footer-link,
+.card-footer .footer-text{
+  display: inline-block;
+  font-size: 14px;
+}
+.card-footer .footer-link{
+  width: 70%;
+}
+.card-footer .footer-text{
+  width: 30%;
+  text-align: right;
+}
